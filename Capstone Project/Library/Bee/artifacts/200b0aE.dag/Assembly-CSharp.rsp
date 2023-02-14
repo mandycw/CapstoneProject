@@ -357,6 +357,7 @@
 "Assets/AurynSky/Gems Ultimate Pack/Scripts/AnimationScript.cs"
 "Assets/ModularFirstPersonController/FirstPersonController/FirstPersonController.cs"
 "Assets/Scripts/Diamond.cs"
+"Assets/Scripts/InventoryUI.cs"
 "Assets/Scripts/MouseLook.cs"
 "Assets/Scripts/PlayerInventory.cs"
 "Assets/Scripts/PlayerMovement.cs"
