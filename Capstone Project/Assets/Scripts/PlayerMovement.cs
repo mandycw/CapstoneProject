@@ -17,10 +17,12 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
 
+    Vector3 spawnPoint;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        spawnPoint = gameObject.transform.position;
     }
 
     // Update is called once per frame
@@ -48,6 +50,11 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+
+         if(gameObject.transform.position.y < -20f)
+        {
+            gameObject.transform.position = spawnPoint;
+        }
 
     }
 
