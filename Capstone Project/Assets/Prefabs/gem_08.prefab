@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4337298568029777596}
   - component: {fileID: -4610619570733739639}
   - component: {fileID: 1836290904820811920}
+  - component: {fileID: 1852387862}
   m_Layer: 0
   m_Name: gem_08
   m_TagString: Untagged
@@ -110,3 +111,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8344d33d8bfcf4522bf29a5caed391d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1852387862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4351499353111303556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ff967b7ed48f2441bcf509edf6b889a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAnimated: 1
+  isRotating: 1
+  isFloating: 1
+  isScaling: 1
+  rotationAngle: {x: 0, y: 1, z: 0}
+  rotationSpeed: 20
+  floatSpeed: 0
+  floatRate: 0
+  startScale: {x: 1, y: 1, z: 1}
+  endScale: {x: 1.5, y: 1.5, z: 1.5}
+  scaleSpeed: 0
+  scaleRate: 0
