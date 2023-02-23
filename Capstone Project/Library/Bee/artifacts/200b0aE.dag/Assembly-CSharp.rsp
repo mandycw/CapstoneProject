@@ -356,6 +356,8 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/AurynSky/Gems Ultimate Pack/Scripts/AnimationScript.cs"
 "Assets/ModularFirstPersonController/FirstPersonController/FirstPersonController.cs"
+"Assets/Scripts/Ability.cs"
+"Assets/Scripts/AbilityHolder.cs"
 "Assets/Scripts/Checkpoint.cs"
 "Assets/Scripts/Diamond.cs"
 "Assets/Scripts/InventoryUI.cs"
