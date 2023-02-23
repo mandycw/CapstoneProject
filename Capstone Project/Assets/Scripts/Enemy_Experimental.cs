@@ -13,6 +13,7 @@ public class Enemy_Experimental : MonoBehaviour
 
     //patrol state
     public Vector3 walkPoint;
+    bool walkPointSet;
     public float walkPointRange;
 
     //attack state
@@ -25,7 +26,7 @@ public class Enemy_Experimental : MonoBehaviour
 
     private void Awake()
     {
-       player = GameObject.Find("Player").Transform;
+       player = GameObject.Find("Player").transform;
        agent = GetComponent<NavMeshAgent>();
 
 
@@ -36,20 +37,20 @@ private void Update() {
     //check if player is in range
     playerInsight = Physics.CheckSphere(transform.position, sightRange, WhatIsPlayer);
     playerInrange = Physics.CheckSphere(transform.position, attackRange, WhatIsPlayer);
-    if (!playerInsight && !playerInrange) Patrol;
-    if (playerInsight && !playerInrange) ChasePlayer;
-    if (playerInrange && playerInrange) AttackPlayer;
+    if (!playerInsight && !playerInrange) Patrol();
+    if (playerInsight && !playerInrange) ChasePlayer();
+    if (playerInrange && playerInrange) AttackPlayer();
 
 }
 private void Patrol()
        {
-         if (!walkPoinSet) Searchwalkpoint();
-         if (walkPoinSet) 
+         if (!walkPointSet) Searchwalkpoint();
+         if (walkPointSet) 
          agent.SetDestination(walkPoint);
          Vector3 distanceTowalkPoint = transform.position - walkPoint;
          //Walkpoint reached
          if (distanceTowalkPoint.magnitude < 1f)
-         walkPoinSet = false;
+         walkPointSet = false;
 
        }
        private void  Searchwalkpoint() 
@@ -57,6 +58,11 @@ private void Patrol()
         // calculate random point in range 
         float randomZ = Random.Range(-walkPointRange, walkPointRange);
          float randomX = Random.Range(-walkPointRange, walkPointRange);
+         walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
+         
+         if (Physics.Raycast(walkPoint, -transform.up, 2f, WhatIsGround))
+         walkPointSet = true;
+
        }
        private void ChasePlayer()
        {
