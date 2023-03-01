@@ -19,6 +19,15 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 spawnPoint;
 
+    public bool isSprinting = false;
+    public float sprintingMultiplier;
+
+    public bool isCrouching = false;
+    public float standingHeight = 3.8f;
+    public float crouchingMultiplier;
+
+    public float crouchingHeight = 2.5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,9 +37,9 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        if(isGrounded && velocity.y < 0)
+        if(isGrounded &&velocity.y < 0)
         {
             velocity.y = -2f;
         }
@@ -38,18 +47,61 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
+
         Vector3 move = transform.right * x + transform.forward * z;
+
 
         controller.Move(move * speed * Time.deltaTime);
 
-        if(Input.GetButtonDown("Jump") && isGrounded)
+
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
+
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            isSprinting = true;
+        }
+        else
+        {
+            isSprinting = false;
+        }
+
+        Vector3 movement = new Vector3();
+
+        movement = x * transform.right + z * transform.forward;
+
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            isCrouching = true;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            isCrouching = false;
+        }
+
+        if (isCrouching == true)
+        {
+            controller.height = crouchingHeight;
+            //movement *= crouchingMultiplier;
+        }
+        else
+        {
+            controller.height = standingHeight;
+        }
+
+        if (isSprinting == true)
+        {
+            movement *= sprintingMultiplier;
         }
 
         velocity.y += gravity * Time.deltaTime;
 
+        controller.Move(movement * speed * Time.deltaTime);
         controller.Move(velocity * Time.deltaTime);
+
 
          if(gameObject.transform.position.y < -20f)
         {
