@@ -22,6 +22,12 @@ public class PlayerMovement : MonoBehaviour
     public bool isSprinting = false;
     public float sprintingMultiplier;
 
+    public bool isCrouching = false;
+    public float standingHeight = 3.8f;
+    public float crouchingMultiplier;
+
+    public float crouchingHeight = 2.5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -66,6 +72,25 @@ public class PlayerMovement : MonoBehaviour
         Vector3 movement = new Vector3();
 
         movement = x * transform.right + z * transform.forward;
+
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            isCrouching = true;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            isCrouching = false;
+        }
+
+        if (isCrouching == true)
+        {
+            controller.height = crouchingHeight;
+            //movement *= crouchingMultiplier;
+        }
+        else
+        {
+            controller.height = standingHeight;
+        }
 
         if (isSprinting == true)
         {

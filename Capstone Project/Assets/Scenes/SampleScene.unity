@@ -288,7 +288,6 @@ GameObject:
   - component: {fileID: 239584839}
   - component: {fileID: 239584841}
   - component: {fileID: 239584842}
-  - component: {fileID: 239584843}
   - component: {fileID: 239584844}
   m_Layer: 0
   m_Name: First Person Player
@@ -346,7 +345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 239584839}
-  speed: 12
+  speed: 5
   gravity: -19
   jumpHeight: 1.5
   groundCheck: {fileID: 415614441}
@@ -354,7 +353,8 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
-  movementInput: {x: 0, y: 0, z: 0}
+  isSprinting: 0
+  sprintingMultiplier: 2
 --- !u!114 &239584842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,20 +382,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &239584843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 239584838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0f2241d38b374041b73f9b6b893e661, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ability: {fileID: 11400000, guid: b69fd26ff6f3141528923d64a1d3ebbd, type: 2}
-  key: 32
 --- !u!54 &239584844
 Rigidbody:
   m_ObjectHideFlags: 0
