@@ -10,6 +10,7 @@ public class Enemy_Experimental : MonoBehaviour
     public Transform player;
    
     public  LayerMask WhatIsGround, WhatIsPlayer;
+    public float hp;
 
     //patrol state
     public Vector3 walkPoint;
@@ -19,6 +20,7 @@ public class Enemy_Experimental : MonoBehaviour
     //attack state
     public float AtkCD;
     bool onCD;
+    public GameObject projectile;
 
     //States
     public float sightRange, attackRange;
@@ -78,7 +80,9 @@ private void Patrol()
         
         if(!onCD) {
          //Attack code
-         
+         Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
          
          onCD = true;
         Invoke(nameof(ResetAttack), AtkCD);
@@ -88,4 +92,21 @@ private void Patrol()
        private void ResetAttack(){
         onCD = false;
        }
+       public void TakeDamage(int damage)
+    {
+        hp -= damage;
+
+        if (hp <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
+    }
+    private void DestroyEnemy()
+    {
+        Destroy(gameObject);
+    }
+     private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, sightRange);
+    }
 }
