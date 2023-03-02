@@ -361,6 +361,7 @@
 "Assets/Scripts/Checkpoint.cs"
 "Assets/Scripts/Diamond.cs"
 "Assets/Scripts/InventoryUI.cs"
+"Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/MouseLook.cs"
 "Assets/Scripts/PlayerInventory.cs"
 "Assets/Scripts/PlayerMovement.cs"
