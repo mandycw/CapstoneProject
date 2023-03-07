@@ -363,6 +363,7 @@
 "Assets/Scripts/InventoryUI.cs"
 "Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/MouseLook.cs"
+"Assets/Scripts/PauseMenu.cs"
 "Assets/Scripts/PlayerInventory.cs"
 "Assets/Scripts/PlayerMovement.cs"
 -langversion:9.0
