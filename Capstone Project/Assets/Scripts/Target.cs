@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
+    public float climb = 2f;
     // Start is called before the first frame update
     void Start()
     {
