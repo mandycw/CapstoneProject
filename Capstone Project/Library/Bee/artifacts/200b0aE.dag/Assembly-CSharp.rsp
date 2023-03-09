@@ -360,13 +360,18 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/AurynSky/Gems Ultimate Pack/Scripts/AnimationScript.cs"
 "Assets/ModularFirstPersonController/FirstPersonController/FirstPersonController.cs"
+"Assets/Scripts/Bullet.cs"
 "Assets/Scripts/Checkpoint.cs"
+"Assets/Scripts/Detectcollisoins.cs"
 "Assets/Scripts/Diamond.cs"
 "Assets/Scripts/Enemy_Experimental.cs"
+"Assets/Scripts/Gun.cs"
+"Assets/Scripts/HP.cs"
 "Assets/Scripts/InventoryUI.cs"
 "Assets/Scripts/MouseLook.cs"
 "Assets/Scripts/PlayerInventory.cs"
 "Assets/Scripts/PlayerMovement.cs"
+"Assets/Scripts/Projectile.cs"
 -langversion:9.0
 
 /deterministic
