@@ -73,11 +73,11 @@ public class PlayerMovement : MonoBehaviour
 
         movement = x * transform.right + z * transform.forward;
 
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             isCrouching = true;
         }
-        if (Input.GetKeyUp(KeyCode.LeftControl))
+        if (Input.GetKeyUp(KeyCode.C))
         {
             isCrouching = false;
         }
@@ -86,10 +86,12 @@ public class PlayerMovement : MonoBehaviour
         {
             controller.height = crouchingHeight;
             //movement *= crouchingMultiplier;
+            speed = 2f;
         }
         else
         {
             controller.height = standingHeight;
+            speed = 5f;
         }
 
         if (isSprinting == true)
