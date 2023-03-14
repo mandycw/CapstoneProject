@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
     bool isGrounded;
+    public bool isDead;
 
     Vector3 spawnPoint;
 
@@ -51,9 +52,17 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
-         if(gameObject.transform.position.y < -20f)
+         if(gameObject.transform.position.y < -20f){
+            isDead = true;
+            
+         }
+         if (isDead == true) {  Respawn();
+         }
+       
+        void Respawn()
         {
             gameObject.transform.position = spawnPoint;
+            isDead = false;
         }
 
     }

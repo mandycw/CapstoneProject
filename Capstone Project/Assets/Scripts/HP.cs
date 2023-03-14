@@ -5,22 +5,27 @@ using UnityEngine.UI;
 
 public class HP : MonoBehaviour
 {
+    private PlayerMovement playerScript;
     public Image healthBar;
     public float healthAmount = 100;
+    
+void start(){
+playerScript = GameObject.Find("Player").GetComponent<PlayerMovement>();
 
+}
     private void Update()
     {
         if(healthAmount <= 0)
         {
-            
+         playerScript.isDead = true;
         }
 
-        if(Input.GetKeyDown(KeyCode.E))
+        if(Input.GetKeyDown(KeyCode.O))
         {
             TakeDamage(20);
         }
 
-        if(Input.GetKeyDown(KeyCode.T))
+        if(Input.GetKeyDown(KeyCode.P))
         {
             Healing(10);
         }

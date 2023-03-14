@@ -7,6 +7,7 @@ TagManager:
   - Checkpoint
   - player projectile
   - Enemy projectile
+  - Enemy
   layers:
   - Default
   - TransparentFX

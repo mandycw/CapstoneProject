@@ -5,4 +5,5 @@ using UnityEngine;
 public class Detectcollisoins : MonoBehaviour
 {
     void OnTriggerEnter(Collider other) { Destroy(gameObject); }
+    
 }
