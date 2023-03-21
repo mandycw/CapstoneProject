@@ -8,6 +8,8 @@ TagManager:
   - player projectile
   - Enemy projectile
   - Enemy
+  - bullet
+  - Ldmg
   layers:
   - Default
   - TransparentFX
