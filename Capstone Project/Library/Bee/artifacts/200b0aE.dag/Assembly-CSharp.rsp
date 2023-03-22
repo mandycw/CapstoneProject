@@ -363,6 +363,7 @@
 "Assets/Scripts/Checkpoint.cs"
 "Assets/Scripts/Detectcollisoins.cs"
 "Assets/Scripts/Diamond.cs"
+"Assets/Scripts/EnemyProjectile.cs"
 "Assets/Scripts/Enemy_Experimental.cs"
 "Assets/Scripts/Gun.cs"
 "Assets/Scripts/InventoryUI.cs"

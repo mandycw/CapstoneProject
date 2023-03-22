@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
     {
         hp -= damage;
 
-        if (hp <= 0){ Invoke(nameof(DestroyPlayer), 0.5f);}
+        if (hp <= 0){ DestroyPlayer();}
     }
     void OnTriggerEnter(Collider other) {
         if (other.CompareTag ("Ldmg")) { Takedmg(5);}
@@ -74,6 +74,7 @@ public class PlayerMovement : MonoBehaviour
     private void DestroyPlayer()
     {
         gameObject.transform.position = spawnPoint;
+        Takedmg(-100);
     }
    
 }
