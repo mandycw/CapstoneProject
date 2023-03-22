@@ -363,6 +363,7 @@
 "Assets/Scripts/MouseLook.cs"
 "Assets/Scripts/PlayerInventory.cs"
 "Assets/Scripts/PlayerMovement.cs"
+"Assets/Scripts/SpeedPad.cs"
 "Assets/Stylized Astronaut/Character/Player.cs"
 "Assets/Stylized Astronaut/Character/ThirdPersonCamera.cs"
 -langversion:9.0
