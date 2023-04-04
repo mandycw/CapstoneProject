@@ -366,6 +366,7 @@
 "Assets/Scripts/SpeedPad.cs"
 "Assets/Stylized Astronaut/Character/Player.cs"
 "Assets/Stylized Astronaut/Character/ThirdPersonCamera.cs"
+"Assets/Teleportation Pad/CustomTeleporter.cs"
 -langversion:9.0
 
 /deterministic
