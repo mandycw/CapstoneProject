@@ -110,7 +110,7 @@ MonoBehaviour:
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 10
   AtkCD: 1
-  projectile: {fileID: 0}
+  projectile: {fileID: 2351776405281742456, guid: 4e6576cf76fd94bde830f5b7835ffcba, type: 3}
   sightRange: 12
   attackRange: 5
   playerInsight: 0

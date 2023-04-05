@@ -28,9 +28,12 @@ public class PlayerMovement : MonoBehaviour
 
     public float crouchingHeight = 2.5f;
 
+    private Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         spawnPoint = gameObject.transform.position;
     }
 
@@ -110,7 +113,14 @@ public class PlayerMovement : MonoBehaviour
             gameObject.transform.position = spawnPoint;
         }
 
+        if (movement!= Vector3.zero)
+        {
+
+
+
+        }
+
+
     }
 
-    
 }
