@@ -66,10 +66,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             isSprinting = true;
+            animator.SetBool("IsRunning", true);
+
         }
         else
         {
             isSprinting = false;
+            animator.SetBool("IsRunning", false);
         }
 
         Vector3 movement = new Vector3();
@@ -115,11 +118,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (movement!= Vector3.zero)
         {
-
-
-
+            animator.SetBool("IsMoving", true);
         }
-
+        else
+        {
+            animator.SetBool("IsMoving", false);
+        }
 
     }
 
