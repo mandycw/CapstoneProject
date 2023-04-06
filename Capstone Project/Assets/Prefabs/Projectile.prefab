@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -9001675334396988119}
   - component: {fileID: 3697113295726414544}
   - component: {fileID: -4989242461654767041}
+  - component: {fileID: 2723934673503192019}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -100,3 +101,16 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2351776405281742456}
   m_Mesh: {fileID: 4300000, guid: 486351f15650ce5408452352641fc317, type: 3}
+--- !u!114 &2723934673503192019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2351776405281742456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 252abf27b2fb94a8885a5b3bc2ea3f56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObj: {fileID: 2351776405281742456}

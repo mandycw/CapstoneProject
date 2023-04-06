@@ -369,6 +369,7 @@
 "Assets/Scripts/Ability.cs"
 "Assets/Scripts/AbilityHolder.cs"
 "Assets/Scripts/Checkpoint.cs"
+"Assets/Scripts/DestroyProj.cs"
 "Assets/Scripts/Diamond.cs"
 "Assets/Scripts/Enemy_Experimental.cs"
 "Assets/Scripts/InventoryUI.cs"
