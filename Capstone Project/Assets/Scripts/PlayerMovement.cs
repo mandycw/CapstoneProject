@@ -28,9 +28,12 @@ public class PlayerMovement : MonoBehaviour
 
     public float crouchingHeight = 2.5f;
 
+    private Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         spawnPoint = gameObject.transform.position;
     }
 
@@ -63,10 +66,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             isSprinting = true;
+            animator.SetBool("IsRunning", true);
+
         }
         else
         {
             isSprinting = false;
+            animator.SetBool("IsRunning", false);
         }
 
         Vector3 movement = new Vector3();
@@ -110,7 +116,15 @@ public class PlayerMovement : MonoBehaviour
             gameObject.transform.position = spawnPoint;
         }
 
+        if (movement!= Vector3.zero)
+        {
+            animator.SetBool("IsMoving", true);
+        }
+        else
+        {
+            animator.SetBool("IsMoving", false);
+        }
+
     }
 
-    
 }
