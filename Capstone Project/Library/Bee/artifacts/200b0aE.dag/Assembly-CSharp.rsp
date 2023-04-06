@@ -379,6 +379,7 @@
 "Assets/Scripts/PlayerInventory.cs"
 "Assets/Scripts/PlayerMovement.cs"
 "Assets/Scripts/VolumeSaveController.cs"
+"Assets/Scripts/WaypointFollower.cs"
 -langversion:9.0
 
 /deterministic
