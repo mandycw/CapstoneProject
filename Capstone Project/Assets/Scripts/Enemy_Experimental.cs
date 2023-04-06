@@ -5,7 +5,7 @@ using UnityEngine.AI;
 public class Enemy_Experimental : MonoBehaviour
 {
     //audio for shooting projectile
-    public AudioSource projectileSound;
+    //public AudioSource projectileSound;
 
    //identifying what is and is not a target
     public NavMeshAgent agent;
@@ -47,7 +47,7 @@ private void Update() {
     if (playerInsight && playerInrange)
        {
          AttackPlayer();
-         projectileSound.Play();
+         //projectileSound.Play();
        }
 
 }
@@ -83,7 +83,7 @@ private void Patrol()
         // make sure enemy doesnt move
         agent.SetDestination(transform.position);
         
-        transform.LookAt(player);
+        
         
         if(!onCD) {
          //Attack code
