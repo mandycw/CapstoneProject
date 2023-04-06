@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
     bool isGrounded;
-    public float hp;
+    public float Playerhp;
 
     Vector3 spawnPoint;
 
@@ -53,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
 
          if(gameObject.transform.position.y < -20f){
+           Takedmg(100);
             DestroyPlayer();
             
          }
@@ -64,17 +65,21 @@ public class PlayerMovement : MonoBehaviour
     }
   public void Takedmg(int damage)
     {
-        hp -= damage;
+        Playerhp -= damage;
 
-        if (hp <= 0){ DestroyPlayer();}
+        if (Playerhp <= 0){ Invoke(nameof(DestroyPlayer), 0.5f);}
     }
     void OnTriggerEnter(Collider other) {
         if (other.CompareTag ("Ldmg")) { Takedmg(5);}
     }
-    private void DestroyPlayer()
+     void DestroyPlayer()
     {
+        
         gameObject.transform.position = spawnPoint;
-        Takedmg(-100);
+        healplayer();
+        
     }
-   
+   void healplayer() {
+    Takedmg(-100);
+   }
 }
