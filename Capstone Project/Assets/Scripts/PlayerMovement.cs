@@ -80,6 +80,6 @@ public class PlayerMovement : MonoBehaviour
         
     }
    void healplayer() {
-    Takedmg(-100);
+    Playerhp = 100;
    }
 }
