@@ -4,32 +4,32 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-
-    Vector3 spawnPoint;
-    public GameObject cube;
-
-    // Start is called before the first frame update
+    [SerializeField] List<GameObject> checkPoints;
+    [SerializeField] GameObject player;
+    [SerializeField] Vector3 vectorPoint;
+    [SerializeField] float dead;
+    // Update is called once per frame
     void Start()
     {
-        spawnPoint = gameObject.transform.position; 
+        
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(gameObject.transform.position.y < -20f)
+        if(gameObject.transform.position.y < -dead)
         {
-            gameObject.transform.position = spawnPoint;
+            gameObject.transform.position = vectorPoint;
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Checkpoint"))
-        {
-            spawnPoint = cube.transform.position;
-
-        }
+            if(other.gameObject.CompareTag("CheckPoint"))
+            {
+                vectorPoint = player.transform.position;
+                Destroy(other.gameObject);
+            }
+            
     }
 }
 
