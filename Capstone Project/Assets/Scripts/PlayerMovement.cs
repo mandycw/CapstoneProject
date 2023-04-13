@@ -74,10 +74,10 @@ public class PlayerMovement : MonoBehaviour
     }
      void DestroyPlayer()
     {
-        
-        gameObject.transform.position = spawnPoint;
+        controller.enabled = false;
+        controller.transform.position = spawnPoint;
         healplayer();
-        
+        controller.enabled = true;
     }
    void healplayer() {
     Playerhp = 100;
