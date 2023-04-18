@@ -325,15 +325,9 @@
 -r:"/Applications/Unity/Hub/Editor/2021.3.9f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XPath.XDocument.dll"
 -r:"/Applications/Unity/Hub/Editor/2021.3.9f1/Unity.app/Contents/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll"
 -r:"/Applications/Unity/Hub/Editor/2021.3.9f1/Unity.app/Contents/NetStandard/ref/2.1.0/netstandard.dll"
-<<<<<<< HEAD
--r:"/Users/WECAI6/Documents/GitHub/CapstoneProject/Capstone Project/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
--r:"/Users/WECAI6/Documents/GitHub/CapstoneProject/Capstone Project/Library/PackageCache/com.unity.testtools.codecoverage@1.0.1/lib/ReportGenerator/ReportGeneratorMerged.dll"
--r:"/Users/WECAI6/Documents/GitHub/CapstoneProject/Capstone Project/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
-=======
 -r:"/Users/ANRODAS/Documents/GitHub/CapstoneProject/Capstone Project/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
 -r:"/Users/ANRODAS/Documents/GitHub/CapstoneProject/Capstone Project/Library/PackageCache/com.unity.testtools.codecoverage@1.0.1/lib/ReportGenerator/ReportGeneratorMerged.dll"
 -r:"/Users/ANRODAS/Documents/GitHub/CapstoneProject/Capstone Project/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
->>>>>>> hp_damage_and_more
 -r:"Library/Bee/artifacts/200b0aE.dag/NavMeshComponents.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/NavMeshComponentsEditor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/NavMeshComponentsExamples.ref.dll"
@@ -372,31 +366,37 @@
 "Assets/Kawaii Slimes/Scripts/AI/Face.cs"
 "Assets/Kawaii Slimes/Scripts/GameManager.cs"
 "Assets/ModularFirstPersonController/FirstPersonController/FirstPersonController.cs"
+"Assets/NavMeshComponents/Examples/Scripts/AgentLinkMover.cs"
+"Assets/NavMeshComponents/Examples/Scripts/ClickToMove.cs"
+"Assets/NavMeshComponents/Examples/Scripts/DestroyOnTrigger.cs"
+"Assets/NavMeshComponents/Examples/Scripts/DungeonManager.cs"
+"Assets/NavMeshComponents/Examples/Scripts/EnableIffSleeping.cs"
+"Assets/NavMeshComponents/Examples/Scripts/FreeCam.cs"
+"Assets/NavMeshComponents/Examples/Scripts/LocalNavMeshBuilder.cs"
+"Assets/NavMeshComponents/Examples/Scripts/MeshTool.cs"
+"Assets/NavMeshComponents/Examples/Scripts/NavMeshPrefabInstance.cs"
+"Assets/NavMeshComponents/Examples/Scripts/NavMeshSourceTag.cs"
+"Assets/NavMeshComponents/Examples/Scripts/Oscillator.cs"
+"Assets/NavMeshComponents/Examples/Scripts/RandomInstancing.cs"
+"Assets/NavMeshComponents/Examples/Scripts/RandomWalk.cs"
+"Assets/NavMeshComponents/Examples/Scripts/SpawnPrefabOnKeyDown.cs"
 "Assets/Scripts/Ability.cs"
 "Assets/Scripts/AbilityHolder.cs"
 "Assets/Scripts/Checkpoint.cs"
-<<<<<<< HEAD
 "Assets/Scripts/DestroyProj.cs"
-"Assets/Scripts/Diamond.cs"
-"Assets/Scripts/Enemy_Experimental.cs"
-=======
 "Assets/Scripts/Detectcollisoins.cs"
 "Assets/Scripts/Diamond.cs"
 "Assets/Scripts/EnemyProjectile.cs"
 "Assets/Scripts/Enemy_Experimental.cs"
 "Assets/Scripts/Gun.cs"
->>>>>>> hp_damage_and_more
 "Assets/Scripts/InventoryUI.cs"
 "Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/MouseLook.cs"
 "Assets/Scripts/PauseMenu.cs"
 "Assets/Scripts/PlayerInventory.cs"
 "Assets/Scripts/PlayerMovement.cs"
-<<<<<<< HEAD
-"Assets/Scripts/VolumeSaveController.cs"
-=======
 "Assets/Scripts/Projectile.cs"
->>>>>>> hp_damage_and_more
+"Assets/Scripts/VolumeSaveController.cs"
 -langversion:9.0
 
 /deterministic

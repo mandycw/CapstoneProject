@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-/Users/WECAI6/Documents/GitHub/CapstoneProject/Capstone Project
-=======
 /Users/ANRODAS/Documents/GitHub/CapstoneProject/Capstone Project
->>>>>>> hp_damage_and_more
