@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Checkpoint
+  - player projectile
+  - Enemy projectile
+  - Enemy
+  - bullet
+  - Ldmg
   layers:
   - Default
   - TransparentFX
@@ -13,7 +18,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Wall
   - 
   - 
   - 
