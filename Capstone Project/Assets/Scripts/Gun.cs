@@ -40,6 +40,7 @@ public class Gun : MonoBehaviour
         //make sure magazine is full
         bulletsLeft = magazineSize;
         readyToShoot = true;
+        
     }
 
     private void Update()
@@ -144,4 +145,5 @@ public class Gun : MonoBehaviour
         bulletsLeft = magazineSize;
         reloading = false;
     }
+    
 }
