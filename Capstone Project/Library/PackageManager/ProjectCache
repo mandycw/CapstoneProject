@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638167622130000000
+      ticks: 638174524580000000
     m_Hash: 1674067885
   m_LockFileStatus:
     m_FilePath: /Users/BRLOPEZ7/Documents/GitHub/CapstoneProject/Capstone Project/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638167622130000000
+      ticks: 638174524580000000
     m_Hash: 208355045
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -316,12 +316,14 @@ m_ResolvedPackages:
     - 3.0.16
     - 3.0.17
     - 3.0.18
+    - 3.0.20
     compatible:
     - 3.0.15
     - 3.0.16
     - 3.0.17
     - 3.0.18
-    verified: 3.0.18
+    - 3.0.20
+    verified: 3.0.20
   dependencies:
   - name: com.unity.ext.nunit
     version: 1.0.6
@@ -391,10 +393,12 @@ m_ResolvedPackages:
     - 2.0.15
     - 2.0.16
     - 2.0.17
+    - 2.0.18
     compatible:
     - 2.0.16
     - 2.0.17
-    verified: 2.0.17
+    - 2.0.18
+    verified: 2.0.18
   dependencies:
   - name: com.unity.test-framework
     version: 1.1.9
@@ -503,7 +507,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: asset
   description: 'Build, edit, and texture custom geometry in Unity. Use ProBuilder
     for in-scene level design, prototyping, collision meshes, all with on-the-fly
     play-testing.
@@ -559,11 +563,13 @@ m_ResolvedPackages:
     - 5.0.3
     - 5.0.4
     - 5.0.6
+    - 5.0.7
     compatible:
     - 5.0.3
     - 5.0.4
     - 5.0.6
-    verified: 5.0.6
+    - 5.0.7
+    verified: 5.0.7
   dependencies:
   - name: com.unity.settings-manager
     version: 1.0.3
@@ -606,7 +612,7 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
-  hideInEditor: 1
+  hideInEditor: 0
   isAssetStorePackage: 0
   datePublishedTicks: 637928847600000000
   documentationUrl: 
@@ -3236,6 +3242,7 @@ m_ResolvedPackages:
     - 1.2.0
     - 1.2.1
     - 1.2.2
+    - 1.2.3
     compatible:
     - 1.0.1
     - 1.1.0
@@ -3250,6 +3257,7 @@ m_ResolvedPackages:
     - 1.2.0
     - 1.2.1
     - 1.2.2
+    - 1.2.3
     verified: 1.0.1
   dependencies:
   - name: com.unity.test-framework
