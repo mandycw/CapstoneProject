@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.AI;
 public class Enemy_Experimental : MonoBehaviour
 {
+    //audio for shooting projectile
+    //public AudioSource projectileSound;
+
    //identifying what is and is not a target
     public NavMeshAgent agent;
     
@@ -41,7 +44,11 @@ private void Update() {
     playerInrange = Physics.CheckSphere(transform.position, attackRange, WhatIsPlayer);
     if (!playerInsight && !playerInrange) Patrol();
     if (playerInsight && !playerInrange) ChasePlayer();
-    if (playerInrange && playerInrange) AttackPlayer();
+    if (playerInsight && playerInrange)
+       {
+         AttackPlayer();
+         //projectileSound.Play();
+       }
 
 }
 private void Patrol()
@@ -76,7 +83,7 @@ private void Patrol()
         // make sure enemy doesnt move
         agent.SetDestination(transform.position);
         
-        transform.LookAt(player);
+        
         
         if(!onCD) {
          //Attack code
@@ -97,9 +104,6 @@ private void Patrol()
         hp -= damage;
 
         if (hp <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
-    }
-    void OnTriggerEnter(Collider other) {
-        if (other.CompareTag ("bullet")) { TakeDamage(5);}
     }
     private void DestroyEnemy()
     {
