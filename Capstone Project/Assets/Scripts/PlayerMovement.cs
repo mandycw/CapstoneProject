@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     public float crouchingMultiplier;
 
     public float crouchingHeight = 2.5f;
+    public float Playerhp;
 
     private Animator animator;
 
@@ -111,10 +112,33 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
 
 
-         if(gameObject.transform.position.y < -20f)
-        {
-            gameObject.transform.position = spawnPoint;
-        }
+        
+        if(gameObject.transform.position.y < -20f){
+          Takedmg(100);
+           DestroyPlayer(); }
+          
+       
+  void Takedmg(int damage)
+   {
+       Playerhp -= damage;
+
+
+       if (Playerhp <= 0){ Invoke(nameof(DestroyPlayer), 0.5f);}
+   }
+   void OnTriggerEnter(Collider other) {
+       if (other.CompareTag ("Ldmg")) { Takedmg(5);}
+   }
+    void DestroyPlayer()
+   {
+       controller.enabled = false;
+       controller.transform.position = spawnPoint;
+       healplayer();
+       controller.enabled = true;
+   }
+  void healplayer() {
+   Playerhp = 100;
+  }
+
 
         if (movement!= Vector3.zero)
         {

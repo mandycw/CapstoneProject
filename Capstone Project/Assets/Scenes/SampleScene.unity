@@ -1169,6 +1169,7 @@ MonoBehaviour:
   standingHeight: 3.8
   crouchingMultiplier: 2
   crouchingHeight: 2
+  Playerhp: 100
 --- !u!114 &239584842
 MonoBehaviour:
   m_ObjectHideFlags: 0
