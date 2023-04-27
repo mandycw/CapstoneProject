@@ -101,7 +101,6 @@ private void Patrol()
     void OnTriggerEnter(Collider other) {
         if (other.CompareTag ("bullet")) { TakeDamage(5);}
     }
-    
     private void DestroyEnemy()
     {
         Destroy(gameObject);
