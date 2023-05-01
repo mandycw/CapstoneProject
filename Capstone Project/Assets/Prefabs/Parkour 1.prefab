@@ -891,7 +891,7 @@ GameObject:
   m_Component:
   - component: {fileID: 614689140272741987}
   m_Layer: 0
-  m_Name: Parkour 1
+  m_Name: PARKOUR 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

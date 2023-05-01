@@ -2465,7 +2465,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7540736812512818021}
   m_Layer: 0
-  m_Name: Barn
+  m_Name: BARN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
