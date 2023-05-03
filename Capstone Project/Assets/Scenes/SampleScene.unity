@@ -658,12 +658,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627024136}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.1700015, y: 1.2599999, z: 1.4400005}
+  m_LocalPosition: {x: 6.87, y: 1.2599999, z: 1.4400005}
   m_LocalScale: {x: 1.0000001, y: 1, z: 1.0000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1618914179}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -2238,10 +2238,10 @@ MonoBehaviour:
   bullet: {fileID: 134281038307108525, guid: 0106c22f6452444ca87dda7284368f7f, type: 3}
   shootForce: 100
   upwardForce: 0
-  timeBetweenShooting: 0.1
+  timeBetweenShooting: 0.12
   spread: 1
   reloadTime: 3
-  timeBetweenShots: 1
+  timeBetweenShots: 0.1
   magazineSize: 30
   bulletsPerTap: 1
   allowButtonHold: 1
@@ -2281,12 +2281,16 @@ PrefabInstance:
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3846163478965112622, guid: 3395273a8a6c04dba9296413e3c54173, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846163478965112622, guid: 3395273a8a6c04dba9296413e3c54173, type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3846163478965112623, guid: 3395273a8a6c04dba9296413e3c54173, type: 3}
       propertyPath: hp
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3846163478965112623, guid: 3395273a8a6c04dba9296413e3c54173, type: 3}
       propertyPath: AtkCD
@@ -2318,7 +2322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3846163478965112659, guid: 3395273a8a6c04dba9296413e3c54173, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.3
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 3846163478965112659, guid: 3395273a8a6c04dba9296413e3c54173, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2352,7 +2356,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3846163478965112658, guid: 3395273a8a6c04dba9296413e3c54173, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3395273a8a6c04dba9296413e3c54173, type: 3}
 --- !u!1 &1696864412
 GameObject:
