@@ -10,7 +10,6 @@ TagManager:
   - Enemy
   - bullet
   - Ldmg
-  - Terrain
   layers:
   - Default
   - TransparentFX
